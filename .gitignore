@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# ignore dev database stuff: 
+migrations 
+*.db
+
 # Distribution / packaging
 .Python
 build/
