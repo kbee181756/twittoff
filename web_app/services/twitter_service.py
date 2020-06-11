@@ -41,10 +41,10 @@ for tweet in tweets:
     print(tweet.id, tweet.full_text)
    
 
-    public_tweets = api.home_timeline()
+#    public_tweets = api.home_timeline()
     
-    for tweet in public_tweets:
-        print(type(tweet)) #> <class 'tweepy.models.Status'>
-        #print(dir(tweet))
-        print(tweet.text)
-        print("-------------")
+#    for tweet in public_tweets:
+#        print(type(tweet)) #> <class 'tweepy.models.Status'>
+#        print(dir(tweet))
+#        print(tweet.text)
+#        print("-------------")
