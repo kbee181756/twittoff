@@ -18,6 +18,8 @@ def predict():
     screen_name_b = request.form["screen_name_b"]
     tweet_text = request.form["tweet_text"]
 
+  
+
     print("-----------------")
     print("FETCHING TWEETS FROM THE DATABASE...")
     # todo: wrap in a try block in case the user's don't exist in the database
@@ -56,7 +58,7 @@ def predict():
     #breakpoint()
 
     #return jsonify({"message": "RESULTS", "most_likely": result[0]})
-    return render_template("results.html",
+    return render_template("prediction_form.html",
         screen_name_a=screen_name_a,
         screen_name_b=screen_name_b,
         tweet_text=tweet_text,
