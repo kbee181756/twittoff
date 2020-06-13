@@ -22,3 +22,7 @@ FLASK_APP=web_app flask db upgrade
 FLASK_APP=web_app flask run 
 ```
 
+# Heroku Server Location 
+```sh
+https://twittoff-keino.herokuapp.com/ | https://git.heroku.com/twittoff-keino.git
+```

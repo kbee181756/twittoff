@@ -32,6 +32,10 @@ def predict():
     print("USER A", user_a.screen_name, len(user_a.tweets))
     print("USER B", user_b.screen_name, len(user_b.tweets))
 
+
+
+
+
     print("-----------------")
     print("TRAINING THE MODEL...")
     embeddings = []
@@ -53,14 +57,16 @@ def predict():
     #result_b = classifier.predict([user_b_tweets[0].embedding])
 
     basilica_api = basilica_api_client()
-    example_embedding = basilica_api.embed_sentence(tweet_text)
+    example_embedding = basilica_api.embed_sentence(tweet_text, model="twitter")
     result = classifier.predict([example_embedding])
+    
     #breakpoint()
 
     #return jsonify({"message": "RESULTS", "most_likely": result[0]})
-    return render_template("prediction_form.html",
+    return render_template("prediction_results.html",
         screen_name_a=screen_name_a,
         screen_name_b=screen_name_b,
         tweet_text=tweet_text,
         screen_name_most_likely= result[0]
     )
+    
